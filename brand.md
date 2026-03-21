@@ -146,6 +146,45 @@ The brand speaks as Morpheus to the tradie who is Neo — just waking up, realis
 
 ---
 
+## AI VOICEOVER SYSTEM
+
+**Tool:** Pinokio — Ultimate TTS Studio (local, runs on NVIDIA GPU)
+**Engine:** Fish Speech (loaded inside Ultimate TTS Studio)
+**Voice model:** Morpheus 2.0 (sourced from fish.audio)
+**Reference file:** bronxweb-morpheus-ref-v1.wav (custom recorded — Bronx Web branded script)
+**Output format:** WAV
+
+### How it works
+1. Write script in Claude (punctuation-based pacing — no tags needed)
+2. Open Ultimate TTS Studio via Pinokio → load Fish Speech engine
+3. Upload bronxweb-morpheus-ref-v1.wav as reference audio
+4. Paste reference text (must match recording word for word)
+5. Paste script into Text to Synthesize
+6. Generate → export WAV
+7. Drop WAV into video editor
+
+### Reference audio script (bronxweb-morpheus-ref-v1.wav)
+> "Most tradies are working hard. Early starts. Long days. Good work. But at the end of the week, the phone didn't ring enough. Not because the work isn't there. Because nobody could find you. That's the Admin Matrix. And there is a way out."
+
+### Pacing rules for scripts (no tags — use punctuation)
+- `...` = pause beat
+- `—` = hard stop / emphasis beat
+- Short sentences = natural delivery rhythm
+- Never write long compound sentences — Fish Speech rushes them
+
+### Script formula for video ads
+```
+Hook:     Name the problem (1–2 short sentences)
+Insight:  The reframe — calm, certain (2–3 sentences with pacing)
+CTA:      One clear action (1 sentence)
+Total:    Under 15 seconds when spoken at Morpheus pace
+```
+
+### Example script (production ready)
+> "Most tradies... are invisible online. Not because they're bad at the job. Because no one... showed them the way out. Bronx Web. Book a free call today."
+
+---
+
 ## VOICE & TONE RULES
 
 - No AI-sounding language — write like a real Kiwi
@@ -174,6 +213,7 @@ The brand speaks as Morpheus to the tradie who is Neo — just waking up, realis
 | Claude (claude.ai) | Content, automation, code assistance |
 | Canva | Social media graphics (MCP connected to claude.ai) |
 | Meta Business Suite | Facebook scheduling |
+| Pinokio — Ultimate TTS Studio | Local AI voiceover generation (Fish Speech engine) |
 
 **Domain:** bronxweb.nz (custom domain via Netlify)
 **Repo:** GitHub — bronxweb.nz project
